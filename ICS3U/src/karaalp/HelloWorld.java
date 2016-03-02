@@ -11,7 +11,7 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		// this prints hello world to the console
 	
-		System.out.println ("Hello World");
+		System.out.println ("Hello World, my name is Adem");
 		
 		
 	}
