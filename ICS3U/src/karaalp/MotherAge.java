@@ -1,11 +1,22 @@
 package karaalp;
 
+/*MotherAge.java
+ * this program finds the age of the mother when the child was born
+ * Adem Karaalp
+ * March 9 2016
+ */
+
 import java.util.Scanner;
 
 public class MotherAge {
 
 	public static void main(String[] arges) {
 		
+		// the program asks for the age of the mother and the kid
+		// the program asks for their names
+		// then the program finds the age of the mother when the kid was born
+		
+		/* variables*/
 		int motherBirthYear;
 		int kidBirthYear;
 		int motherAge;
@@ -14,6 +25,7 @@ public class MotherAge {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		/* Processing*/
 		System.out.println("What is your mothers name?");
 		motherName = scan.nextLine();
 		System.out.println("What is your mothers birthyear?");
@@ -24,6 +36,7 @@ public class MotherAge {
 		kidBirthYear = Integer.parseInt(scan.nextLine());
 		motherAge = kidBirthYear - motherBirthYear;
 		
+		/*Output*/
 		System.out.println("The mother name is " + motherName);
 		System.out.println("The mother's birth year is " + motherBirthYear);
 		System.out.println("The kids name is "+ kidName);
