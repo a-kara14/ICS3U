@@ -39,10 +39,12 @@ public class DiceGame {
 		//output
 		if (user > com)
 		{
+			System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
 			System.out.println("you won, congrats "+ name);
 		}
 		else if (com > user)
 		{ 
+			System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
 			System.out.println("You Lost " + name);
 		}
 	
