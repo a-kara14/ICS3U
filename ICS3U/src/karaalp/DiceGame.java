@@ -8,12 +8,12 @@ import java.util.Scanner;
  * March23,2016
  */
 
-
 public class DiceGame {
-	
+
 	public static void main(String[] args) {
-	
-		//variables
+
+		// variables
+		String again = "yes";
 		String name;
 		int dice1;
 		int dice2;
@@ -21,32 +21,34 @@ public class DiceGame {
 		int dice4;
 		int user;
 		int com;
-		
-		Scanner scan = new Scanner (System.in);
-		
-		//input
+
+		Scanner scan = new Scanner(System.in);
+
+		// input
 		System.out.println("Whats is your name?");
 		name = scan.nextLine();
-	
-		dice1 = (int)(Math.random() * 6) + 1;
-		dice2 = (int)(Math.random() * 6) + 1;
-		dice3 = (int)(Math.random() * 6) + 1;
-		dice4 = (int)(Math.random() * 6) + 1;
-	
-		user = dice1 + dice2;
-		com = dice3 + dice4;
-		
+
 		//output
-		if (user > com)
-		{
-			System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
-			System.out.println("you won, congrats "+ name);
+		while (again.equals("yes")) {
+			dice1 = (int) (Math.random() * 6) + 1;
+			dice2 = (int) (Math.random() * 6) + 1;
+			dice3 = (int) (Math.random() * 6) + 1;
+			dice4 = (int) (Math.random() * 6) + 1;
+
+			user = dice1 + dice2;
+			com = dice3 + dice4;
+
+			{
+				if (user > com) {
+					System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
+					System.out.println("you won, congrats " + name);
+				} else if (com > user) {
+					System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
+					System.out.println("You Lost " + name);
+				}
+			}
+			System.out.println("Do you want to play again?");
+			again = scan.nextLine();
 		}
-		else if (com > user)
-		{ 
-			System.out.println(name + " You rolled " + user + " and the computer rolled " + com);
-			System.out.println("You Lost " + name);
-		}
-	
-}
+	}
 }
