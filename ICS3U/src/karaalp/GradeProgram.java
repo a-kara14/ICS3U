@@ -16,11 +16,13 @@ public class GradeProgram {
 		int grade;
 		int studentsInClass;
 		
+		//Input
 		Scanner scan = new Scanner (System.in);
 		
 		System.out.println("How many students are in the class?");
 		studentsInClass = Integer.parseInt(scan.nextLine());
 		
+		//output
 		for (int i=0; i <= studentsInClass; i++) {
 			
 			System.out.println("What is the mark for this Student?");
