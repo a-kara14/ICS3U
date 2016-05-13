@@ -80,9 +80,6 @@ public class WordGuess {
 				}
 			} else {
 				System.out.println("You guessed the word, congragulations you won!");
-				System.out.println("Do you want to play again?");
-				play = scan.nextLine();
-
 			}
 			System.out.println("Do you want to play again?");
 			play = scan.nextLine();
