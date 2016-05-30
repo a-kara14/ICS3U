@@ -14,11 +14,13 @@ public class FunWithMath2 {
 	public static DecimalFormat df = new DecimalFormat("0.0");
 
 	public static void main(String[] args) {
+		// variables
 		Scanner scan = new Scanner(System.in);
+		// input
 		System.out.println("Enter two numbers (a and b)");
 		double num1 = scan.nextInt();
 		double num2 = scan.nextInt();
-
+		// output
 		System.out.println("a*b=" + (df.format(multiply(num1, num2))));
 		System.out.println("a/b=" + (df.format(divide(num1, num2))));
 		System.out.println("a-b=" + (df.format(subtract(num1, num2))));
