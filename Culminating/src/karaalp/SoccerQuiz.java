@@ -89,6 +89,7 @@ public class SoccerQuiz {
 		soccer.setCursor(5, 3);
 		// changes the font
 		soccer.setFont(new Font("SansSerif", Font.PLAIN, 15));
+		try {
 		// the quiz starts
 		soccer.drawString("Welcome,", 15, 50);
 		soccer.drawString("Do you want to play? (yes or no)", 15, 70);
@@ -99,15 +100,20 @@ public class SoccerQuiz {
 		if (play.equalsIgnoreCase("yes")) {
 			// if answer is yes the progrma enters the while loop
 			playOrNah = true;
+			soccer.clear();
 		} else {
 			// if answer is no the program skips the while loop
-			soccer.println("I guess we wont play");
 			playOrNah = false;
+			soccer.clear();
+			soccer.println("I guess we wont play :(");
+			Thread.sleep(2000);
+			//exits the console
+			soccer.close();
 		}
-		soccer.clear();
+		
 		// loop starts
 		while (playOrNah == true) {
-			try {
+			
 				// the font is changed
 				soccer.setFont(new Font("SansSerif", Font.BOLD, 45));
 				// the title is displayed
@@ -218,15 +224,22 @@ public class SoccerQuiz {
 					soccer.clear();
 					playOrNah = true;
 				} else {
-
+					
+					soccer.clear();
+					soccer.println("Thanks for playing :)");
+					Thread.sleep(2000);
+					
 					// exits the main loop
 					playOrNah = false;
+					//exits the console
+					soccer.close();
 				}
-
+		}
 			} catch (InterruptedException ie) {
 				System.err.println(ie.getMessage());
 			}
-		}
+
+		
 	}
 
 	/**
